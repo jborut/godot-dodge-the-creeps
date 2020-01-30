@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cast_Spell.wav-90345e74aa4fd1b4d7d2d85bb843f051.sample"
+
+[deps]
+
+source_file="res://dodge_assets/art/Cast_Spell.wav"
+dest_files=[ "res://.import/Cast_Spell.wav-90345e74aa4fd1b4d7d2d85bb843f051.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
