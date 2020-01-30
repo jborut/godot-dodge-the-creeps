@@ -97,13 +97,10 @@ public class Main : Node2D
 		// lets clear up the scene
 		foreach(var node in GetChildren())
 		{
-			if (node is Mob)
+			if (node is Mob || node is Bomb)
 			{
-				((Mob)node).QueueFree();
-			}
-			else if (node is Bomb)
-			{
-				((Bomb)node).QueueFree();
+				((RigidBody2D)node).Hide();
+				((RigidBody2D)node).QueueFree();
 			}
 		}
 		
