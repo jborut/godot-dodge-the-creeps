@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://dodge_assets/art/bomb1_2.png" type="Texture" id=1]
 [ext_resource path="res://dodge_assets/art/bomb1_1.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://dodge_assets/art/bomb1explode_5.png" type="Texture" id=7]
 [ext_resource path="res://dodge_assets/art/bomb1explode_1.png" type="Texture" id=8]
 [ext_resource path="res://dodge_assets/art/bomb1explode_2.png" type="Texture" id=9]
+[ext_resource path="res://dodge_assets/art/PM_GL_IMAPACT_LFE_TOOLKIT__26.wav" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -53,5 +54,8 @@ stream = ExtResource( 4 )
 
 [node name="RemoveTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="BombExplosionStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="timeout" from="ExplodeTimer" to="." method="onExplodeTimerTimeout"]
 [connection signal="timeout" from="RemoveTimer" to="." method="onRemoveTimerTimeout"]

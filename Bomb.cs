@@ -10,6 +10,7 @@ public class Bomb : RigidBody2D
 	private AnimatedSprite _bombSprite;
 	private CollisionShape2D _collisionShape;
 	private AudioStreamPlayer _bombPlaceSound;
+	private AudioStreamPlayer _bombExplodeSound;
 	private Timer _removeTimer;
 
 	// Called when the node enters the scene tree for the first time.
@@ -26,6 +27,7 @@ public class Bomb : RigidBody2D
 		_bombPlaceSound = GetNode<AudioStreamPlayer>("BombPlaceStreamPlayer");
 		_bombPlaceSound.Play();	
 		
+		_bombExplodeSound = GetNode<AudioStreamPlayer>("BombExplosionStreamPlayer");
 		_removeTimer = GetNode<Timer>("RemoveTimer");
 	}
 
@@ -36,6 +38,9 @@ public class Bomb : RigidBody2D
 		
 		// start the timer that will remove the bomb
 		_removeTimer.Start();
+		
+		// play explosion sound
+		_bombExplodeSound.Play();
 		
 		// emit Explode signal
 		EmitSignal("Explode", Position);
