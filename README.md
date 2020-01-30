@@ -10,6 +10,6 @@ The difference between the version described in the documentation and this one i
 
 To start the game from the menu simply press Enter. Before the game starts you will see instructions on how to move and place bombs.
 
-Every second your score will increase by 1. If you kill the mob with a bomb you will get 10 more points. At the beginning you only have 5 bombs, but every 10 seconds, or if you kill mob, you will get one more bomb.
+Every second your score will increase by 1. If you kill the mob with a bomb you will get 10 more points. At the beginning you only have 5 bombs, but every 10 seconds, or if you kill a mob, you will get one more bomb.
 
-Once you get killed, the score and bombs number will remain visible until you start a new game.
+Once you get killed, the score and bombs values will remain visible until you start a new game.
